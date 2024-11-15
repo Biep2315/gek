@@ -45,6 +45,14 @@
             animation: pulse 1.5s ease-in-out infinite;
         }
 
+        .small-text {
+            font-size: 1.5em;
+            color: #6a5acd; /* Paars voor contrast */
+            margin-top: 20px;
+            font-weight: 400;
+            animation: fadeIn 2s ease-out;
+        }
+
         @keyframes pulse {
             0% { transform: scale(1); }
             50% { transform: scale(1.3); }
@@ -65,12 +73,24 @@
             }
         }
 
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 4em;
             }
             .emoji {
                 font-size: 7em;
+            }
+            .small-text {
+                font-size: 0.1em;
             }
         }
 
@@ -81,6 +101,9 @@
             .emoji {
                 font-size: 6em;
             }
+            .small-text {
+                font-size: 1.2em;
+            }
         }
     </style>
 </head>
@@ -88,6 +111,7 @@
     <div class="container">
         <h1>Bep, Jeje en Nanners zijn GEK.</h1>
         <div class="emoji">🤪</div>
+        <div class="small-text">En biep natuurlijk niet.</div>
     </div>
 </body>
 </html>
