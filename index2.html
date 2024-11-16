@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gekke Bep, Jeje en Nanners</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #ffeb3b; /* Felle gele achtergrond voor energie */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            color: #212121;
+            overflow: hidden;
+            animation: backgroundChange 10s ease-in-out infinite;
+        }
+
+        @keyframes backgroundChange {
+            0% { background-color: #ffeb3b; }
+            50% { background-color: #ff4081; }
+            100% { background-color: #ffeb3b; }
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 40px 50px;
+            border-radius: 25px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 700px;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 5em;
+            color: #ff5722; /* Fel oranje kleur voor de tekst */
+            font-weight: bold;
+            margin: 0 0 40px;
+            animation: textAnimation 1.5s ease-in-out;
+            text-transform: uppercase;
+        }
+
+        @keyframes textAnimation {
+            0% { transform: translateY(-100px); opacity: 0; }
+            60% { transform: translateY(20px); opacity: 1; }
+            100% { transform: translateY(0); }
+        }
+
+        .emoji {
+            font-size: 10em;
+            animation: emojiSpin 2s linear infinite;
+            color: #ff4081; /* Roze kleur voor de emoji */
+            margin-bottom: 20px;
+        }
+
+        @keyframes emojiSpin {
+            0% { transform: rotate(0deg); }
+            50% { transform: rotate(180deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .small-text {
+            font-size: 1.8em;
+            color: #673ab7; /* Paars voor de kleine tekst */
+            font-weight: 600;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeInText 2s ease-out forwards;
+        }
+
+        @keyframes fadeInText {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 4em;
+            }
+            .emoji {
+                font-size: 8em;
+            }
+            .small-text {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 3.5em;
+            }
+            .emoji {
+                font-size: 7em;
+            }
+            .small-text {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bep, Jeje en Nanners zijn GEK!</h1>
+        <div class="emoji">🤡</div> <!-- Clown emoji voor gekke sfeer -->
+        <div class="small-text">En biep natuurlijk niet!</div>
+    </div>
+</body>
+</html>
