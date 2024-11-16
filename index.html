@@ -7,88 +7,87 @@
     <style>
         body {
             margin: 0;
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            background-color: #ffeb3b; /* Felle gele achtergrond voor energie */
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ff8a00, #e52e71); /* Oranje-roze gradient achtergrond */
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100%;
-            min-height: 100vh; /* Zorgt ervoor dat de achtergrond altijd zichtbaar is */
+            height: 100vh;
             text-align: center;
-            color: #212121;
+            color: #fff;
             overflow: hidden;
-            flex-direction: column; /* Zorgt ervoor dat de inhoud netjes wordt gecentreerd */
-            animation: backgroundChange 10s ease-in-out infinite;
-        }
-
-        @keyframes backgroundChange {
-            0% { background-color: #ffeb3b; }
-            50% { background-color: #ff4081; }
-            100% { background-color: #ffeb3b; }
         }
 
         .container {
-            background-color: #ffffff;
-            padding: 40px 50px;
-            border-radius: 25px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
             width: 90%;
             max-width: 700px;
-            position: relative;
-            z-index: 1;
         }
 
         h1 {
             font-size: 5em;
-            color: #ff5722; /* Fel oranje kleur voor de tekst */
+            color: #fff;
             font-weight: bold;
-            margin: 0 0 40px;
-            animation: textAnimation 1.5s ease-in-out;
-            text-transform: uppercase;
-        }
-
-        @keyframes textAnimation {
-            0% { transform: translateY(-100px); opacity: 0; }
-            60% { transform: translateY(20px); opacity: 1; }
-            100% { transform: translateY(0); }
+            margin: 0 0 30px;
+            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+            animation: bounceIn 1.5s ease-out;
         }
 
         .emoji {
             font-size: 10em;
-            animation: emojiSpin 2s linear infinite;
-            color: #ff4081; /* Roze kleur voor de emoji */
-            margin-bottom: 20px;
-        }
-
-        @keyframes emojiSpin {
-            0% { transform: rotate(0deg); }
-            50% { transform: rotate(180deg); }
-            100% { transform: rotate(360deg); }
+            animation: shake 0.5s ease-in-out infinite;
         }
 
         .small-text {
-            font-size: 1.8em;
-            color: #673ab7; /* Paars voor de kleine tekst */
+            font-size: 1.5em;
+            color: #ffff00; /* Gele tekst voor contrast */
             font-weight: 600;
             margin-top: 20px;
-            opacity: 0;
-            animation: fadeInText 2s ease-out forwards;
+            animation: fadeIn 1.5s ease-out;
         }
 
-        @keyframes fadeInText {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-15px); }
+            50% { transform: translateX(15px); }
+            75% { transform: translateX(-15px); }
+            100% { transform: translateX(0); }
+        }
+
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            60% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
         }
 
         @media (max-width: 768px) {
             h1 {
-                font-size: 4em;
+                font-size: 4.5em;
             }
             .emoji {
                 font-size: 8em;
             }
             .small-text {
-                font-size: 1.5em;
+                font-size: 1.4em;
             }
         }
 
@@ -97,7 +96,7 @@
                 font-size: 3.5em;
             }
             .emoji {
-                font-size: 7em;
+                font-size: 6em;
             }
             .small-text {
                 font-size: 1.3em;
@@ -107,9 +106,9 @@
 </head>
 <body>
     <div class="container">
-        <h1>Bep, Jeje en Nanners zijn GEK!</h1>
-        <div class="emoji">🤡</div> <!-- Clown emoji voor gekke sfeer -->
-        <div class="small-text">En biep natuurlijk niet!</div>
+        <h1>Bep, Jeje en Nanners zijn HEEL GEK!</h1>
+        <div class="emoji">😜</div>
+        <div class="small-text">En Biep? Tja... die is ook gek, maar niet zo gek als de rest!</div>
     </div>
 </body>
 </html>
