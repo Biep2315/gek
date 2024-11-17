@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leuke Website</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #FF7E5F, #feb47b);
+      color: white;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-30px);
+      }
+    }
+
+    .text {
+      font-size: 4rem;
+      animation: bounce 2s infinite ease-in-out;
+    }
+
+    .emoji {
+      font-size: 3rem;
+      animation: shake 1s infinite ease-in-out;
+    }
+
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-10px); }
+      50% { transform: translateX(10px); }
+      75% { transform: translateX(-10px); }
+      100% { transform: translateX(0); }
+    }
+
+    @media (max-width: 600px) {
+      .text {
+        font-size: 2.5rem;
+      }
+
+      .emoji {
+        font-size: 2.5rem;
+      }
+    }
+
+    .button {
+      background-color: #fff;
+      color: #FF7E5F;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      margin-top: 30px;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.2s;
+    }
+
+    .button:hover {
+      transform: scale(1.1);
+    }
+
+    .temporary-text {
+      font-size: 2rem;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 20px;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .show {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="text">Iedereen is gek behalve Biep</div>
+    <div class="emoji">🤪🚌🍕</div>
+    <button class="button" onclick="showTemporaryText()">Klik hier voor een verrassing!</button>
+    <div id="temporaryText" class="temporary-text">Jij bent ook gek! 😜</div>
+  </div>
+  
+  <script>
+    function showTemporaryText() {
+      const tempText = document.getElementById('temporaryText');
+      
+      tempText.classList.add('show');
+
+      setTimeout(() => {
+        tempText.classList.remove('show');
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
